@@ -1,0 +1,34 @@
+AuthorName: Michael Hainz
+Categories:
+  - Writing
+  - Time
+License: GPL-3.0-only
+Name: SimpleDay
+SourceCode: https://github.com/MiggiV2/SimpleDay
+IssueTracker: https://github.com/MiggiV2/SimpleDay/issues
+WebSite: https://github.com/MiggiV2/SimpleDay
+Summary: Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync
+Description: |-
+  SimpleDay is a minimalist diary app built around one idea: one entry per day.
+  No feeds, no clutter, no accounts — just a calm space to write.
+
+  Write in Markdown and keep it private. Entries stay on your device and,
+  optionally, on a WebDAV server you control.
+
+  Features:
+
+  * Markdown support — formatting, lists, headers
+  * Live preview — toggle between edit and preview mode
+  * Minimalist, distraction-free interface
+  * One entry per day — a simple, focused approach to journaling
+  * Auto-save — never lose your thoughts
+  * App lock — biometrics (fingerprint/Face ID) or device PIN
+  * WebDAV sync — backup to your own cloud (Nextcloud, ownCloud, …), with optional encryption
+  * Smart import — import existing entries from WebDAV on first launch
+  * Privacy first — no trackers, no ads, no analytics
+
+  Your data belongs to you. SimpleDay talks only to the WebDAV server you
+  configure — nothing else. Free software, GNU GPLv3.
+
+  This app is developed with AI (Claude / Claude Code) and manually tested and
+  maintained by a human.

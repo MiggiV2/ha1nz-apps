@@ -1,0 +1,26 @@
+# Example fdroidserver config. Copy to `config.yml` and fill in real values,
+# OR just run `fdroid init` (it generates config.yml + a signing keystore).
+#
+# NEVER commit the real config.yml — it holds the keystore passwords in
+# plaintext. It is gitignored in this repo, and so is keystore.p12.
+
+sdk_path: $ANDROID_HOME
+
+# The signing key alias inside the keystore (fdroid init default: localhost).
+repo_keyalias: localhost
+
+# The keystore holding the repo signing key. Back this up and keep it forever —
+# losing it means clients must remove and re-add the repo.
+keystore: keystore.p12
+
+# Passwords for the keystore and key. `fdroid init` generates random ones.
+# Shown here as placeholders only.
+keystorepass: CHANGE_ME
+keypass: CHANGE_ME
+keydname: CN=localhost, OU=F-Droid
+
+# Public repo settings.
+repo_url: https://fdroid.ha1nz.de/fdroid/repo
+repo_name: ha1nz Apps
+repo_description: >-
+  Modern Android apps — built by machines, tested by humans.

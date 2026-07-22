@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ha1nz Apps — built by machines, tested by humans</title>
+<meta name="description" content="A small self-hosted F-Droid repository. Modern Android apps, coded by AI and tested by a human.">
+<style>
+  :root {
+    --bg:        #f6f7f9;
+    --surface:   #ffffff;
+    --surface-2: #eef0f3;
+    --border:    #dde1e7;
+    --ink:       #171b21;
+    --ink-soft:  #5a626e;
+    --ink-faint: #8b929c;
+    --machine:   #1f8fb0;   /* cool — the Android Dev */
+    --human:     #c96f3f;   /* warm — the Product Owner */
+    --focus:     #1f8fb0;
+    --mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #0e1216;
+      --surface:   #161b21;
+      --surface-2: #1c222a;
+      --border:    #2a313b;
+      --ink:       #e7ebef;
+      --ink-soft:  #a4adb8;
+      --ink-faint: #6d7783;
+      --machine:   #55c6e4;
+      --human:     #e69063;
+      --focus:     #55c6e4;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg:#f6f7f9; --surface:#fff; --surface-2:#eef0f3; --border:#dde1e7;
+    --ink:#171b21; --ink-soft:#5a626e; --ink-faint:#8b929c;
+    --machine:#1f8fb0; --human:#c96f3f; --focus:#1f8fb0;
+  }
+  :root[data-theme="dark"] {
+    --bg:#0e1216; --surface:#161b21; --surface-2:#1c222a; --border:#2a313b;
+    --ink:#e7ebef; --ink-soft:#a4adb8; --ink-faint:#6d7783;
+    --machine:#55c6e4; --human:#e69063; --focus:#55c6e4;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: clamp(2.5rem, 6vw, 5rem) 1.25rem 4rem; }
+
+  /* ---- hero ---- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 1.4rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 720;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+  }
+  h1 .m { color: var(--machine); }
+  h1 .h { color: var(--human); }
+  .lede {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0;
+  }
+  .cursor {
+    display: inline-block;
+    width: .58ch; height: 1.05em;
+    background: var(--machine);
+    margin-left: .1em;
+    transform: translateY(.16em);
+    animation: blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+  /* ---- roles ---- */
+  .roles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2.75rem 0;
+  }
+  .role { background: var(--surface); padding: 1.25rem 1.35rem; }
+  .role .tag {
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: .5rem;
+  }
+  .role.machine .tag { color: var(--machine); }
+  .role.human   .tag { color: var(--human); }
+  .role .who { font-weight: 640; font-size: 1.05rem; }
+  .role .what { color: var(--ink-soft); font-size: .92rem; }
+  @media (max-width: 460px) { .roles { grid-template-columns: 1fr; } }
+
+  /* ---- section ---- */
+  h2 {
+    font-family: var(--mono);
+    font-size: .8rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin: 3rem 0 1.1rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ---- add-repo card ---- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem;
+  }
+  .field { margin-bottom: 1rem; }
+  .field:last-child { margin-bottom: 0; }
+  .field .k {
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+    margin-bottom: .3rem;
+  }
+  .mono-val {
+    font-family: var(--mono);
+    font-size: .82rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: .55rem .7rem;
+    color: var(--ink);
+    word-break: break-all;
+    display: block;
+  }
+  .btn-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
+  .btn {
+    font-family: var(--sans);
+    font-size: .9rem;
+    font-weight: 560;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    background: var(--surface-2);
+    transition: border-color .15s, transform .05s;
+  }
+  .btn.primary { background: var(--machine); border-color: var(--machine); color: #04161c; }
+  .btn:hover { border-color: var(--focus); }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .hint { font-size: .84rem; color: var(--ink-faint); margin: .8rem 0 0; }
+  .hint a { color: var(--machine); }
+
+  /* ---- app list ---- */
+  .app {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.15rem 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s;
+  }
+  .app:hover { border-color: var(--focus); }
+  .app:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .app img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
+  .app .body { min-width: 0; }
+  .app .row1 { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+  .app .name { font-weight: 660; font-size: 1.08rem; }
+  .chip {
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .04em;
+    color: var(--machine);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: .1rem .5rem;
+  }
+  .app .sum { color: var(--ink-soft); font-size: .92rem; margin: .2rem 0 0; }
+  .app .meta { font-family: var(--mono); font-size: .72rem; color: var(--ink-faint); margin-top: .5rem; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+    font-size: .85rem;
+    color: var(--ink-faint);
+  }
+  footer .disc { font-family: var(--mono); font-size: .76rem; line-height: 1.7; }
+  footer .disc b { color: var(--ink-soft); font-weight: 600; }
+  footer a { color: var(--machine); }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">ha1nz&nbsp;apps&nbsp;·&nbsp;f-droid&nbsp;repository</p>
+    <h1>Built by <span class="m">machines</span>,<br>tested by <span class="h">humans</span>.<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="lede">A small, self-hosted home for modern Android apps. Each one is written by AI and put through its paces by a person who actually uses it.</p>
+
+    <section class="roles" aria-label="Who builds what">
+      <div class="role machine">
+        <span class="tag">// Android Dev</span>
+        <div class="who">Claude</div>
+        <div class="what">Writes the code — logic, UI, architecture.</div>
+      </div>
+      <div class="role human">
+        <span class="tag">// Product Owner</span>
+        <div class="who">A human</div>
+        <div class="what">Decides, reviews, tests every feature, ships &amp; maintains.</div>
+      </div>
+    </section>
+
+    <h2>Add this repository</h2>
+    <div class="card">
+      <div class="field">
+        <span class="k">Repository URL</span>
+        <code class="mono-val" id="repo-url">https://fdroid.ha1nz.de/fdroid/repo</code>
+      </div>
+      <div class="field">
+        <span class="k">Fingerprint (SHA-256)</span>
+        <code class="mono-val" id="fp">2DF848F5A8BCCF5EFCF307727D41C28EACA96393D1409A833F289F3A15BD446D</code>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" id="fdroid-link" href="fdroidrepos://fdroid.ha1nz.de/fdroid/repo?fingerprint=2DF848F5A8BCCF5EFCF307727D41C28EACA96393D1409A833F289F3A15BD446D">Add to F-Droid client</a>
+        <button class="btn" id="copy-btn" type="button">Copy URL</button>
+      </div>
+      <p class="hint">Works with any F-Droid-compatible client (F-Droid, Neo Store) and with <a href="https://github.com/ImranR98/Obtainium">Obtainium</a>. Tap the button on your phone, or add the URL manually.</p>
+    </div>
+
+    <h2>Apps</h2>
+    <a class="app" href="https://github.com/MiggiV2/SimpleDay">
+      <img src="data:image/png;base64,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" alt="SimpleDay icon" width="52" height="52">
+      <div class="body">
+        <div class="row1">
+          <span class="name">SimpleDay</span>
+          <span class="chip">v1.2.0</span>
+        </div>
+        <p class="sum">Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync.</p>
+        <div class="meta">GPL-3.0-only · de.mymiggi.simpleday · source ↗</div>
+      </div>
+    </a>
+
+    <footer>
+      <p class="disc">
+        <b>How this repo works.</b> Apps here are AI-authored on purpose. A human
+        acts as product owner: choosing what to build, reviewing the code,
+        manually testing each release, and signing &amp; publishing it. Full
+        source is linked per app — audit it yourself.
+      </p>
+      <p>Hosted on a personal k3s cluster · index signed offline · no trackers.</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var url = document.getElementById("repo-url").textContent.trim();
+      var btn = document.getElementById("copy-btn");
+      btn.addEventListener("click", function () {
+        navigator.clipboard.writeText(url).then(function () {
+          var old = btn.textContent;
+          btn.textContent = "Copied ✓";
+          setTimeout(function () { btn.textContent = old; }, 1600);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

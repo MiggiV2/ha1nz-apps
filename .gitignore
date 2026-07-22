@@ -1,0 +1,23 @@
+# --- SECRETS — never commit these ---
+# config.yml holds keystorepass / keypass in plaintext
+config.yml
+# the repo signing key and any other keystores
+keystore.p12
+*.keystore
+*.jks
+*.p12
+*.gpg
+
+# --- generated / large output (served from the cluster PVC, not from git) ---
+repo/
+archive/
+tmp/
+status/
+.fdroid.jar
+.fdroid.json
+.fdroid.yml
+
+# --- python venv ---
+.venv/
+__pycache__/
+*.pyc
