@@ -1,0 +1,28 @@
+AuthorName: Michael Hainz
+Categories:
+  - Multimedia
+License: MIT
+Name: Movie Mobile
+SourceCode: https://code.mymiggi.de/Miggi/movie-mobile2
+IssueTracker: https://code.mymiggi.de/Miggi/movie-mobile2/issues
+WebSite: https://code.mymiggi.de/Miggi/movie-mobile2
+Summary: Browse your Movie Archive collection, online or offline
+Description: |-
+  Movie Mobile is a companion app for the Movie Archive. Browse your movie
+  collection, dig into the details of any title, and keep viewing even when
+  you have no connection.
+
+  Features:
+
+  * Movie browsing — scroll a full list with poster images
+  * Search and sort — filter by title, sort by name or year
+  * Detailed view — runtime, genres, ratings and descriptions per movie
+  * OIDC login — secure sign-in via OpenID Connect
+  * Offline support — a cache-first strategy keeps the movie list and any
+    details you have opened available with no internet connection
+  * Dark and light mode — follows your device theme
+  * Privacy first — talks only to your own Movie Archive backend, no trackers,
+    no ads, no analytics
+
+  This app is developed with AI (Claude / Claude Code) and manually tested and
+  maintained by a human.
