@@ -54,11 +54,58 @@ POD="$(kubectl -n "$NAMESPACE" get pod -l app="$DEPLOYMENT" \
 blue "🚚 Publishing to pod $POD"
 
 # --- push the homepage + repo files into the PVC ---
-# Wipe the remote repo dir first so re-runs stay clean (no repo/repo nesting,
-# and files deleted locally also disappear on the server).
-kubectl -n "$NAMESPACE" exec "$POD" -- sh -c "mkdir -p $DOCROOT/fdroid && rm -rf $DOCROOT/fdroid/repo"
+# Incremental: APK filenames carry the versionCode, so an APK that already
+# exists remotely with the same size is byte-identical and gets skipped.
+# Everything else (index, icons, diffs) is small and always re-sent.
+# `kubectl cp` has no delta transfer, so re-copying every APK on each run
+# would mean re-uploading the whole repo (hundreds of MB) for nothing.
+REMOTE_REPO="$DOCROOT/fdroid/repo"
+kubectl -n "$NAMESPACE" exec "$POD" -- mkdir -p "$REMOTE_REPO"
+
+# name<TAB>size of every remote file, relative to the repo root
+remote_list="$(kubectl -n "$NAMESPACE" exec "$POD" -- \
+  find "$REMOTE_REPO" -type f -exec stat -c "%n	%s" {} + 2>/dev/null \
+  | sed "s|^$REMOTE_REPO/||" || true)"
+
+# Files to send: everything except APKs that are already there at the same size.
+send_list="$(mktemp)"
+delete_list="$(mktemp)"
+trap 'rm -f "$send_list" "$delete_list"' EXIT
+
+while IFS= read -r f; do
+  case "$f" in
+    *.apk)
+      size="$(stat -c '%s' "repo/$f")"
+      if printf '%s\n' "$remote_list" | grep -qxF "$f	$size"; then
+        continue
+      fi
+      ;;
+  esac
+  printf '%s\n' "$f" >> "$send_list"
+done < <(cd repo && find . -type f -printf '%P\n' | sort)
+
+# Remote files that no longer exist locally (e.g. archived old versions).
+while IFS="	" read -r f _; do
+  [ -n "$f" ] || continue
+  [ -e "repo/$f" ] || printf '%s\n' "$f" >> "$delete_list"
+done < <(printf '%s\n' "$remote_list")
+
+skipped=$(( $(cd repo && find . -type f | wc -l) - $(wc -l < "$send_list") ))
+blue "📦 Sending $(wc -l < "$send_list") file(s), skipping $skipped unchanged APK(s)"
+
 kubectl -n "$NAMESPACE" cp site/index.html "$POD:$DOCROOT/index.html"
-kubectl -n "$NAMESPACE" cp repo             "$POD:$DOCROOT/fdroid/repo"
+
+if [ -s "$send_list" ]; then
+  tar -c -C repo -T "$send_list" -f - \
+    | kubectl -n "$NAMESPACE" exec -i "$POD" -- tar -x -C "$REMOTE_REPO"
+fi
+
+if [ -s "$delete_list" ]; then
+  blue "🗑  Removing $(wc -l < "$delete_list") stale remote file(s)"
+  while IFS= read -r f; do
+    kubectl -n "$NAMESPACE" exec "$POD" -- rm -f "$REMOTE_REPO/$f"
+  done < "$delete_list"
+fi
 
 green "✅ Published."
 green "   Homepage: https://fdroid.ha1nz.de/"

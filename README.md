@@ -113,10 +113,36 @@ The script:
 
 1. copies the APK into `repo/`,
 2. runs `fdroid update` to rebuild and **sign** the index,
-3. `kubectl cp`s the homepage + `repo/` into the cluster PVC.
+3. syncs the homepage + `repo/` into the cluster PVC **incrementally** — an APK
+   that already exists on the server with the same filename and size is
+   skipped, and files deleted locally are removed remotely.
 
 Run it with **no arguments** to just re-sign the index and re-sync (e.g. after
 editing the homepage or an app’s metadata under `metadata/`).
+
+Because the index, icons, and screenshots are always re-sent while APKs are
+matched by filename + size, a typical re-publish moves a few MB instead of the
+whole repo. The versionCode is part of every APK filename, so same name + same
+size means the same bytes. If you ever rebuild an APK **without** changing its
+filename, delete it from the server first (or rename it) so the new build is
+actually uploaded.
+
+### Multi-ABI (split) APKs
+
+For apps built with ABI splits, give each ABI its own versionCode — the usual
+scheme is `baseVersionCode * 1000 + abiCode` with the ABIs numbered so that the
+preferred one sorts highest (e.g. `armeabi-v7a=1`, `arm64-v8a=2`). F-Droid
+clients install the highest versionCode whose `nativecode` matches the device,
+so a 64-bit phone gets the arm64 APK and a 32-bit one falls back to armeabi-v7a.
+
+Two consequences worth remembering:
+
+- Once you publish `*1000`-style codes, **every** later release must keep the
+  multiplier. A bare `versionCode 5` would rank below an already-published
+  `4002` and F-Droid would treat it as a downgrade and ignore it.
+- Keep the older universal APK in `repo/` if you still want to serve ABIs the
+  splits don’t cover (e.g. `x86_64` emulators); its lower versionCode means
+  split-capable devices still prefer the smaller APK.
 
 ---
 
