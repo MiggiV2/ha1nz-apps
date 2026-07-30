@@ -1,0 +1,3 @@
+Erste Version.
+
+Umkreissuche, Favoriten, Detailseite mit Öffnungszeiten und Navigation per geo-Intent. Offline-first, kein Tracking, eigener API-Key verschlüsselt im Android-Keystore.

@@ -1,0 +1,25 @@
+Aktuelle Preise für E5, E10 und Diesel an deutschen Tankstellen — schnell abgefragt und ohne dass jemand mitliest.
+
+<b>Was Tankblick kann</b>
+
+* Umkreissuche mit Preis, Entfernung und Öffnungsstatus
+* Favoriten für die Tankstellen, die du wirklich anfährst — alle mit einer einzigen Abfrage aktualisiert
+* Detailseite mit allen drei Preisen, Adresse und Öffnungszeiten
+* Navigation mit der App deiner Wahl: Organic Maps, OsmAnd, oder was du sonst installiert hast
+* Funktioniert offline weiter und sagt ehrlich, wie alt die angezeigten Preise sind
+
+<b>Was Tankblick nicht macht</b>
+
+Kein Konto. Kein Tracking, keine Analytics, keine Werbung. Keine Hintergrundabfragen.
+
+Die App spricht mit genau einem Server: creativecommons.tankerkoenig.de. Dein Standort verlässt das Gerät nur als Koordinatenpaar in einer Suche, die du selbst auslöst. Favoriten, Einstellungen und Preise bleiben lokal, der Preisverlauf wird nach 30 Tagen gelöscht.
+
+<b>Eigener API-Key nötig</b>
+
+Tankerkönig vergibt Schlüssel pro Person, und ein in der App versteckter Schlüssel wäre ohnehin auslesbar. Registriere dich kostenlos auf onboarding.tankerkoenig.de — Pflichtangaben sind Vorname, Nachname und E-Mail-Adresse. Der Key wird von Hand geprüft, das kann einige Tage dauern. Zum Ausprobieren gibt es einen Demo-Key direkt in der App.
+
+Dein Schlüssel wird mit AES-256-GCM im Android-Keystore verschlüsselt und ist vom Cloud-Backup ausgenommen.
+
+<b>Attribution</b>
+
+Preisdaten: Tankerkönig / Markttransparenzstelle für Kraftstoffe des Bundeskartellamts, lizenziert unter CC BY 4.0 — https://creativecommons.tankerkoenig.de/
