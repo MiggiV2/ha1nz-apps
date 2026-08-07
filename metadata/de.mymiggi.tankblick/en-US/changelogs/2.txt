@@ -1,0 +1,7 @@
+New app icon: a fuel gauge that also reads as an eye.
+
+Fixed: onboarding text was nearly unreadable in dark mode, and on the detail
+screen the keyboard covered the field for naming a favourite.
+
+New: appearance is now configurable — light, dark or follow the system, plus
+four colour schemes for anyone who does not want the dynamic Material theme.

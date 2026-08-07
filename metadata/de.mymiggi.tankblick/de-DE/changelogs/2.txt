@@ -1,0 +1,7 @@
+Neues App-Icon: eine Tankanzeige, die sich zugleich als Auge liest.
+
+Behoben: Im Dunkelmodus war die Schrift beim Onboarding kaum lesbar. Auf der
+Detailseite verdeckte die Tastatur das Feld für den eigenen Favoriten-Namen.
+
+Neu: Darstellung ist einstellbar — hell, dunkel oder wie das System, dazu vier
+Farbschemata für alle, die das dynamische Material-Theme nicht mögen.
