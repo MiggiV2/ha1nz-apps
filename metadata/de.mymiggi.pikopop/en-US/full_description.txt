@@ -1,0 +1,26 @@
+A Matrix messenger for people who talk in stickers. Kotlin, Jetpack Compose,
+Material 3, and the matrix-rust-sdk — the same crypto library Element uses.
+The interface is German.
+
+Features:
+
+* Sign in through MAS/OIDC in a Custom Tab with PKCE — the app never renders a password field at all
+* Every room in one list: unread counts, mute state, encryption state, last message, filters for unread and Spaces, pending invitations
+* Timeline with replies, edits, deletions, reactions, typing indicators and read receipts, images from the photo picker or the camera — and no camera and no storage permission is declared
+* Stickers first class: a bookshelf of your packs, a picker that stays out of the way, sending as m.sticker rather than as an image
+* Import a FluffyChat sticker pack from a zip, or a pack another account published — MSC2545 in both its stable and its unstable spelling
+* Encryption you can actually see: one Security screen for session verification, cross-signing, key backup and the recovery key, each with its own honest state
+* An undecryptable message is not a dead end — it names the cause and offers exactly the remedy that applies
+* Push through UnifiedPush, so no Google Play Services are needed
+* Four themes, each with a light and a dark palette, and a brightness override independent of the system
+* Privacy first — no trackers, no ads, no analytics; the session is encrypted at rest and excluded from cloud backup
+
+The app talks to the homeserver you sign in to, and to nothing else. There is
+no account with the developer, no telemetry and no crash reporting.
+
+This is a pre-release: it works, it is used daily, and interoperability with
+Element and FluffyChat is tested by hand in both directions — but not every
+corner has seen a device yet.
+
+This app is developed with AI (Claude / Claude Code) and manually tested and
+maintained by a human.

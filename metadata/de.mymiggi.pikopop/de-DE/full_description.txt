@@ -1,0 +1,27 @@
+Ein Matrix-Messenger für alle, die in Stickern reden. Kotlin, Jetpack Compose,
+Material 3 und das matrix-rust-sdk — dieselbe Krypto-Bibliothek, die Element
+benutzt. Die Oberfläche ist deutsch.
+
+Funktionen:
+
+* Anmeldung über MAS/OIDC im Custom Tab mit PKCE — die App zeigt überhaupt kein Passwortfeld
+* Alle Räume in einer Liste: Ungelesenzähler, Stummschaltung, Verschlüsselungszustand, letzte Nachricht, Filter für Ungelesene und Spaces, offene Einladungen
+* Timeline mit Antworten, Bearbeiten, Löschen, Reaktionen, Schreibanzeige und Lesebestätigungen, Bilder aus der Fotoauswahl oder von der Kamera — und keine Kamera- und keine Speicherberechtigung wird deklariert
+* Sticker sind erste Klasse: ein Regal für die eigenen Packs, eine Auswahl, die nicht im Weg steht, versendet als m.sticker statt als Bild
+* Ein FluffyChat-Sticker-Pack aus einem Zip importieren oder ein Pack, das ein anderes Konto veröffentlicht hat — MSC2545 in der stabilen und der unstabilen Schreibweise
+* Verschlüsselung, die man sehen kann: ein Sicherheits-Bildschirm für Sitzungsverifikation, Cross-Signing, Schlüssel-Backup und Wiederherstellungsschlüssel, jeder mit ehrlichem Zustand
+* Eine unentschlüsselbare Nachricht ist keine Sackgasse — sie nennt die Ursache und bietet genau das an, was hilft
+* Push über UnifiedPush, also ohne Google Play Services
+* Vier Themes, jeweils hell und dunkel, dazu eine Helligkeitswahl unabhängig vom System
+* Datensparsam — keine Tracker, keine Werbung, keine Analytik; die Sitzung liegt verschlüsselt auf dem Gerät und ist vom Cloud-Backup ausgeschlossen
+
+Die App spricht mit dem Homeserver, an dem du dich anmeldest, und mit nichts
+sonst. Es gibt kein Konto beim Entwickler, keine Telemetrie und kein
+Crash-Reporting.
+
+Das ist ein Pre-Release: die App läuft und wird täglich benutzt, und die
+Zusammenarbeit mit Element und FluffyChat ist in beide Richtungen von Hand
+getestet — aber nicht jede Ecke hat schon ein Gerät gesehen.
+
+Diese App wird mit KI (Claude / Claude Code) entwickelt und von einem Menschen
+händisch getestet und gepflegt.

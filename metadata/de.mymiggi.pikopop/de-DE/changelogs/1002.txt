@@ -1,0 +1,10 @@
+Erster Pre-Release von Piko Pop.
+
+Alles Wesentliche ist da: Anmeldung über OIDC ohne Passwortfeld, Raumliste,
+Timeline mit Antworten, Reaktionen, Bildern und Lesebestätigungen, sichtbare
+Verschlüsselung mit Verifikation und Schlüssel-Backup, Sticker als eigene
+Nachrichtenart samt Regal, Werkstatt und Import aus FluffyChat-Zips, Push über
+UnifiedPush und vier Themes in hell und dunkel.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a — jedes
+Telefon der letzten Jahre.

@@ -1,0 +1,10 @@
+First pre-release of Piko Pop.
+
+Everything essential is in: OIDC sign-in with no password field, the room list,
+a timeline with replies, reactions, images and read receipts, visible encryption
+with verification and key backup, stickers as their own message type with a
+bookshelf, a workshop and import from FluffyChat zips, push over UnifiedPush,
+and four themes in light and dark.
+
+Signed with our own key. This APK is for arm64-v8a — every phone of the last
+few years.
