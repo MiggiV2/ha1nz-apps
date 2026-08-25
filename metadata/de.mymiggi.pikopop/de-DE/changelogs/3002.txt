@@ -1,0 +1,11 @@
+Vier Sachen aus dem dritten Gerätedurchlauf.
+
+Alle Emojis stehen jetzt als Reaktion zur Auswahl — der vollständige Katalog
+mit Suche und Kategorien statt einer Handvoll, das rote Herz vorne in der
+Schnellauswahl. Das Eingabefeld wird bei mehreren Zeilen nicht mehr oval: die
+Rundung lief bisher in den Text hinein und überschattete die Buchstaben. Raum-
+und DM-Avatare sind da, in einer DM das Bild der anderen Person; ohne Bild
+bleiben die Initialen stehen. Und nach dem Senden springt die Liste ans Ende,
+statt in der Historie stehen zu bleiben.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

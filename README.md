@@ -17,7 +17,7 @@ to build, review the code, test every release, and sign & publish it.
 |-----|---------|---------|---------|--------|
 | **SimpleDay** | Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync | 1.2.0 | GPL-3.0-only | [MiggiV2/SimpleDay](https://github.com/MiggiV2/SimpleDay) |
 | **Movie Mobile** | Browse your Movie Archive collection, online or offline | 1.3.0 | MIT | [Miggi/movie-mobile2](https://code.mymiggi.de/Miggi/movie-mobile2) |
-| **Piko Pop** | Sticker-first, cozy Matrix messenger — encrypted, no password field | 0.1.1 (pre-release) | GPL-3.0-or-later | [Miggi/Piko-Pop](https://code.mymiggi.de/Miggi/Piko-Pop) |
+| **Piko Pop** | Sticker-first, cozy Matrix messenger — encrypted, no password field | 0.1.2 (pre-release) | GPL-3.0-or-later | [Miggi/Piko-Pop](https://code.mymiggi.de/Miggi/Piko-Pop) |
 
 ---
 

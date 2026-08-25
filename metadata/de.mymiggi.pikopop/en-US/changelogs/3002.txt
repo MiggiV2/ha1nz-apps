@@ -1,0 +1,11 @@
+Four things from the third device pass.
+
+Every emoji is now available as a reaction — the full catalogue with search and
+categories instead of a handful, with the red heart first in the quick row. The
+input field no longer turns oval across several lines: the rounding used to
+reach into the text and shadow the letters. Room and DM avatars are in, showing
+the other person's picture in a DM; without one the initials stay. And after
+sending, the list jumps back to the newest end instead of staying up in the
+history.
+
+Signed with our own key. This APK is for arm64-v8a.
