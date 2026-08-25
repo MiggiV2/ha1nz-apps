@@ -1,0 +1,12 @@
+Bug fixes from the second device pass.
+
+The chat list's filter row scrolls and search finds rooms again. A room left
+empty after a restart now fetches its own history. Four defects at the SDK edge
+are gone: the crash on a newly created room, unguarded listeners, the blocked
+main thread behind "not responding" when opening a room, and the duplicate room
+lists that put a raw room id in the title. In the sticker bookshelf and six
+other places the layout no longer crushes its children.
+
+New: a full-screen confirmation after a successful verification.
+
+Signed with our own key. This APK is for arm64-v8a.

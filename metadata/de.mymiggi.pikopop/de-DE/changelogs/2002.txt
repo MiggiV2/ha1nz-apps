@@ -1,0 +1,12 @@
+Fehlerkorrekturen aus dem zweiten Gerätedurchlauf.
+
+Die Filterzeile der Chatliste scrollt und die Suche findet Räume wieder. Ein
+nach dem Neustart leerer Raum lädt seine Geschichte selbst nach. Am SDK-Rand
+sind vier Fehler weg: der Absturz bei einem neuen Raum, unbewachte Listener,
+der blockierte Hauptthread hinter dem "reagiert nicht" beim Öffnen eines Raums
+und die doppelten Raumlisten samt roher Raumkennung im Titel. Im Stickerregal
+und an sechs weiteren Stellen quetscht das Layout nichts mehr.
+
+Neu: eine formatfüllende Bestätigung nach einer erfolgreichen Verifizierung.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
