@@ -1,0 +1,79 @@
+{
+  "repo": {
+    "name": {"en-US": "test repo"},
+    "address": "https://example.invalid/fdroid/repo",
+    "timestamp": 1785000000000
+  },
+  "packages": {
+    "org.example.trap": {
+      "metadata": {
+        "added": 1784000000000,
+        "lastUpdated": 1785000000000,
+        "name": {"en-US": "Trap"},
+        "summary": {"en-US": "Highest versionCode is the x86_64 split"},
+        "license": "GPL-3.0-only",
+        "sourceCode": "https://example.invalid/trap",
+        "icon": {"en-US": {"name": "/org.example.trap/en-US/icon.png"}}
+      },
+      "versions": {
+        "c": {"file": {"name": "/trap-8003-x86_64-release.apk", "size": 33333333},
+              "manifest": {"versionCode": 8003, "versionName": "1.4.0", "nativecode": ["x86_64"]}},
+        "b": {"file": {"name": "/trap-8002-arm64-v8a-release.apk", "size": 32950000},
+              "manifest": {"versionCode": 8002, "versionName": "1.4.0", "nativecode": ["arm64-v8a"]}},
+        "a": {"file": {"name": "/trap-8001-armeabi-v7a-release.apk", "size": 27000000},
+              "manifest": {"versionCode": 8001, "versionName": "1.4.0", "nativecode": ["armeabi-v7a"]}},
+        "old": {"file": {"name": "/trap-6002-arm64-v8a-release.apk", "size": 32900000},
+                "manifest": {"versionCode": 6002, "versionName": "1.3.0", "nativecode": ["arm64-v8a"]}}
+      }
+    },
+    "org.example.universal": {
+      "metadata": {
+        "added": 1784500000000,
+        "lastUpdated": 1784900000000,
+        "name": {"en-US": "Universal"},
+        "summary": {"en-US": "One APK for every ABI"},
+        "license": "MIT",
+        "sourceCode": "https://example.invalid/universal",
+        "icon": {"en-US": {"name": "/org.example.universal/en-US/icon.png"}}
+      },
+      "versions": {
+        "b": {"file": {"name": "/universal-4-universal-release.apk", "size": 2097152},
+              "manifest": {"versionCode": 4, "versionName": "0.3.0",
+                           "nativecode": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]}},
+        "a": {"file": {"name": "/universal-3-universal-release.apk", "size": 2097000},
+              "manifest": {"versionCode": 3, "versionName": "0.2.1",
+                           "nativecode": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]}}
+      }
+    },
+    "org.example.nativeless": {
+      "metadata": {
+        "added": 1784600000000,
+        "lastUpdated": 1784600000000,
+        "name": {"en-US": "Nativeless"},
+        "summary": {"en-US": "Pure Java, no native code at all"},
+        "license": "Apache-2.0",
+        "sourceCode": "https://example.invalid/nativeless",
+        "icon": {"en-US": {"name": "/org.example.nativeless/en-US/icon.png"}}
+      },
+      "versions": {
+        "a": {"file": {"name": "/nativeless-7-release.apk", "size": 1048576},
+              "manifest": {"versionCode": 7, "versionName": "2.0.0"}}
+      }
+    },
+    "org.example.x86only": {
+      "metadata": {
+        "added": 1784700000000,
+        "lastUpdated": 1784700000000,
+        "name": {"en-US": "X86 Only"},
+        "summary": {"en-US": "Nothing an arm64 phone could install"},
+        "license": "MIT",
+        "sourceCode": "https://example.invalid/x86only",
+        "icon": {"en-US": {"name": "/org.example.x86only/en-US/icon.png"}}
+      },
+      "versions": {
+        "a": {"file": {"name": "/x86only-2-x86-release.apk", "size": 1048576},
+              "manifest": {"versionCode": 2, "versionName": "1.0.0", "nativecode": ["x86"]}}
+      }
+    }
+  }
+}

@@ -15,9 +15,12 @@ to build, review the code, test every release, and sign & publish it.
 
 | App | Summary | Version | License | Source |
 |-----|---------|---------|---------|--------|
-| **SimpleDay** | Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync | 1.2.0 | GPL-3.0-only | [MiggiV2/SimpleDay](https://github.com/MiggiV2/SimpleDay) |
-| **Movie Mobile** | Browse your Movie Archive collection, online or offline | 1.3.0 | MIT | [Miggi/movie-mobile2](https://code.mymiggi.de/Miggi/movie-mobile2) |
+<!-- apps:begin -->
+| **SimpleDay** | Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync | 1.4.0 | GPL-3.0-only | [MiggiV2/SimpleDay](https://github.com/MiggiV2/SimpleDay) |
+| **Movie Mobile** | Browse your Movie Archive collection, online or offline | 1.3.1 | MIT | [Miggi/movie-mobile2](https://code.mymiggi.de/Miggi/movie-mobile2) |
+| **Tankblick** | German fuel prices for E5, E10 and diesel — no account, no tracking | 0.3.0 (pre-release) | GPL-3.0-or-later | [Miggi/tankblick](https://code.mymiggi.de/Miggi/tankblick) |
 | **Piko Pop** | Sticker-first, cozy Matrix messenger — encrypted, no password field | 0.1.3 (pre-release) | GPL-3.0-or-later | [Miggi/Piko-Pop](https://code.mymiggi.de/Miggi/Piko-Pop) |
+<!-- apps:end -->
 
 ---
 
@@ -62,6 +65,13 @@ https://fdroid.ha1nz.de/
     ├── index-v1.jar         ← signed legacy index
     └── *.apk                ← the app binaries
 ```
+
+The homepage is **generated**, not hand-written: `site/render.py` reads the
+signed `repo/index-v2.json` and fills the app list of
+[`site/index.template.html`](site/index.template.html) plus the table at the top
+of this README. Version, size, licence, summary, icon and download link
+therefore always describe the APKs that are actually in the repo. Edit the
+template, never `site/index.html`.
 
 The **index is signed** with a repo key that lives only on the maintainer’s
 machine. Clients pin the fingerprint above, so they reject any index that
@@ -114,7 +124,9 @@ The script:
 
 1. copies the APK into `repo/`,
 2. runs `fdroid update` to rebuild and **sign** the index,
-3. syncs the homepage + `repo/` into the cluster PVC **incrementally** — an APK
+3. renders `site/index.html` and this README's app table from that index
+   (`site/render.py`),
+4. syncs the homepage + `repo/` into the cluster PVC **incrementally** — an APK
    that already exists on the server with the same filename and size is
    skipped, and files deleted locally are removed remotely.
 
@@ -144,6 +156,11 @@ Two consequences worth remembering:
 - Keep the older universal APK in `repo/` if you still want to serve ABIs the
   splits don’t cover (e.g. `x86_64` emulators); its lower versionCode means
   split-capable devices still prefer the smaller APK.
+- The **highest versionCode is not the APK to hand a phone.** With that scheme
+  `x86_64` sorts above `arm64-v8a`, so SimpleDay's newest code is its x86_64
+  split. The homepage download button therefore picks the highest code among
+  the builds whose `nativecode` covers `arm64-v8a`, and `site/test_render.py`
+  keeps it that way.
 
 ---
 
@@ -151,7 +168,10 @@ Two consequences worth remembering:
 
 ```
 .
-├── site/index.html            # homepage (served at /)
+├── site/index.template.html    # homepage layout (edit this one)
+├── site/index.html             # generated homepage (served at /)
+├── site/render.py              # renders the app list from repo/index-v2.json
+├── site/test_render.py         # python3 -m unittest discover site
 ├── metadata/                   # per-app F-Droid metadata (name, summary, license…)
 ├── k8s/fdroid.yaml             # Kubernetes manifest (nginx + PVC + Ingress)
 ├── publish-fdroid.sh           # build signed index + push to the cluster

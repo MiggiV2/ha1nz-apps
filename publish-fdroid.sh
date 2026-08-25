@@ -47,6 +47,13 @@ fi
 blue "🔏 Generating signed index (fdroid update)…"
 fdroid update 2>&1 | grep -vE "WARNING: (A restricted|java.lang.System|Use --enable|Restricted methods)" || true
 
+# --- render the homepage + README from that index ---
+# Version, size, licence, icon and download link of every app come out of
+# repo/index-v2.json. Typed by hand they drifted two releases behind the repo,
+# and Tankblick was served for weeks without ever appearing on the page.
+blue "🧾 Rendering site/index.html and README.md from the index…"
+python3 site/render.py
+
 # --- find the running pod ---
 POD="$(kubectl -n "$NAMESPACE" get pod -l app="$DEPLOYMENT" \
         -o jsonpath='{.items[0].metadata.name}')"
