@@ -1,0 +1,13 @@
+Drei Befunde aus einem Gerätedurchlauf an der Sticker-Werkstatt.
+
+Die Werkstatt kam nach dem Speichern mit dem alten Bild zurück, samt dessen
+schon belegtem Kürzel. Jetzt wird sie beim Schließen geleert, ein neues Bild
+wirft Kürzel, Fehler und Upload-Status weg, und ein Button "Anderes Bild" holt
+ein anderes Bild, ohne den Screen zu verlassen. Das Modell für den
+freigestellten Hintergrund wird beim ersten Aufruf noch geladen: bisher sprang
+der Toggle dabei zurück auf aus, jetzt wartet die App bis zu fünfmal im Abstand
+von 1,5 Sekunden, der Toggle bleibt an, und ein Spinner sagt, was passiert. Die
+Sticker eines Packs lagen in einer seitwärts scrollenden Zeile und waren so nur
+halb erreichbar; jetzt stehen sie in einem umbrechenden Raster.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

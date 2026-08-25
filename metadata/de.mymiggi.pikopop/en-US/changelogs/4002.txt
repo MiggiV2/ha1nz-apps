@@ -1,0 +1,13 @@
+Three findings from a device pass over the sticker workshop.
+
+After saving, the workshop came back holding the old image and its already
+taken shortcode. Closing it now clears it, picking a new image drops the
+shortcode, the error and the upload state, and a button "Anderes Bild" fetches
+a different image without leaving the screen. The model behind background
+removal is still downloading on first use: the toggle used to snap back to off,
+now the app waits up to five times at 1.5 second intervals, the toggle stays on
+and a spinner says what is happening. A pack's stickers sat in a sideways
+scrolling row and were only half reachable; they are laid out in a wrapping
+grid now.
+
+Signed with our own key. This APK is for arm64-v8a.
