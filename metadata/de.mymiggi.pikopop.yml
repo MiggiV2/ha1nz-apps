@@ -7,7 +7,7 @@ Name: Piko Pop
 SourceCode: https://code.mymiggi.de/Miggi/Piko-Pop
 IssueTracker: https://code.mymiggi.de/Miggi/Piko-Pop/issues
 WebSite: https://code.mymiggi.de/Miggi/Piko-Pop
-Summary: Sticker-first, cozy Matrix messenger — encrypted, no password field
+Summary: Sticker-first, cozy Matrix messenger — encrypted, OIDC-first sign-in
 Description: |-
   A Matrix messenger for people who talk in stickers. Kotlin, Jetpack Compose,
   Material 3, and the matrix-rust-sdk — the same crypto library Element uses.
@@ -15,7 +15,7 @@ Description: |-
 
   Features:
 
-  * Sign in through MAS/OIDC in a Custom Tab with PKCE — the app never renders a password field at all
+  * Sign in through MAS/OIDC in a Custom Tab with PKCE; a homeserver without MAS can use its password login, and the password never leaves the login screen
   * Every room in one list: unread counts, mute state, encryption state, last message, filters for unread and Spaces, pending invitations
   * Timeline with replies, edits, deletions, reactions, typing indicators and read receipts, images from the photo picker or the camera — and no camera and no storage permission is declared
   * Stickers first class: a bookshelf of your packs, a picker that stays out of the way, sending as m.sticker rather than as an image

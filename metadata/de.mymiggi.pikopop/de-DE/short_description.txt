@@ -1,1 +1,1 @@
-Stickerverliebter Matrix-Messenger — verschlüsselt, ohne Passwortfeld
+Stickerverliebter Matrix-Messenger — verschlüsselt, Anmeldung per OIDC

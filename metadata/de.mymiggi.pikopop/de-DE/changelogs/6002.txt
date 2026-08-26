@@ -1,0 +1,18 @@
+Zwei Erweiterungen, eine davon hebt ein altes Versprechen auf.
+
+Ein Homeserver ohne MAS war bisher eine Sackgasse: die Discovery las die
+Login-Flows schon immer, nur das Tor war zu. Jetzt gibt es die Anmeldung per
+Passwort. OIDC behält den Vorrang — das Passwortfeld erscheint ausschließlich
+dort, wo der Server kein OIDC anbietet, und wer MAS ausliefert, bekommt es nie
+zu sehen. Falsches Passwort und Rate-Limit werden unterschieden und benennen
+die Wartezeit, die der Server verlangt. Das Passwort lebt für genau einen
+Aufruf im Login-Screen und erreicht weder den UI-Zustand noch die Sitzung noch
+den verschlüsselten Sitzungsspeicher.
+
+Links in Nachrichten sind anklickbar. http://, https:// und blankes www.
+werden unterstrichen und öffnen den Browser, Satzzeichen am Satzende bleiben
+außerhalb des Links. E-Mail-Adressen, Matrix-Ids und Schemata wie javascript:
+oder intent: bleiben reiner Text. Ein Tippen anderswo in der Blase öffnet
+weiterhin die Nachrichtenaktionen.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

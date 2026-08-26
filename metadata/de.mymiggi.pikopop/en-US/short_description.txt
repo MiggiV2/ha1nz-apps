@@ -1,1 +1,1 @@
-Sticker-first, cozy Matrix messenger — encrypted, no password field
+Sticker-first, cozy Matrix messenger — encrypted, OIDC-first sign-in

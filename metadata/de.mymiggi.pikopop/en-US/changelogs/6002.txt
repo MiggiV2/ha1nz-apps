@@ -1,0 +1,17 @@
+Two additions, one of which retires an old promise.
+
+A homeserver without MAS used to be a dead end: discovery had always read the
+login flows, only the gate was shut. Password sign-in exists now. OIDC keeps
+priority — the password field appears solely where the server offers no OIDC,
+and anyone running MAS never sees one. A wrong password and a rate limit read
+differently, and the latter names the wait the server asked for. The password
+lives for exactly one call inside the login screen and reaches neither the UI
+state nor the session nor the encrypted session store.
+
+Links in messages are tappable. http://, https:// and a bare www. are
+underlined and open the browser, with sentence punctuation left outside the
+link. Email addresses, matrix ids and schemes such as javascript: or intent:
+stay plain text. Tapping anywhere else in the bubble still opens the message
+actions.
+
+Signed with our own key. This APK is for arm64-v8a.

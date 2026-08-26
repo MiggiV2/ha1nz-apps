@@ -4,7 +4,7 @@ benutzt. Die Oberfläche ist deutsch.
 
 Funktionen:
 
-* Anmeldung über MAS/OIDC im Custom Tab mit PKCE — die App zeigt überhaupt kein Passwortfeld
+* Anmeldung über MAS/OIDC im Custom Tab mit PKCE; ein Homeserver ohne MAS kann die Passwort-Anmeldung nutzen, das Passwort verlässt den Login-Screen nicht
 * Alle Räume in einer Liste: Ungelesenzähler, Stummschaltung, Verschlüsselungszustand, letzte Nachricht, Filter für Ungelesene und Spaces, offene Einladungen
 * Timeline mit Antworten, Bearbeiten, Löschen, Reaktionen, Schreibanzeige und Lesebestätigungen, Bilder aus der Fotoauswahl oder von der Kamera — und keine Kamera- und keine Speicherberechtigung wird deklariert
 * Sticker sind erste Klasse: ein Regal für die eigenen Packs, eine Auswahl, die nicht im Weg steht, versendet als m.sticker statt als Bild
