@@ -20,11 +20,15 @@ DEPLOYMENT="fdroid"
 DOCROOT="/usr/share/nginx/html"
 ANDROID_HOME="${ANDROID_HOME:-$HOME/Android/Sdk}"
 export ANDROID_HOME
-export PATH="$PATH:$ANDROID_HOME/build-tools/36.1.0"
-
 green() { printf '\033[0;32m%s\033[0m\n' "$1"; }
 blue()  { printf '\033[0;34m%s\033[0m\n' "$1"; }
 red()   { printf '\033[0;31m%s\033[0m\n' "$1"; }
+
+# Newest build-tools rather than a pinned one: fdroid update needs apksigner,
+# and a laptop with only 36.0.0 installed silently got an empty PATH entry.
+BUILD_TOOLS="$(ls -d "$ANDROID_HOME"/build-tools/*/ 2>/dev/null | sort -V | tail -1)"
+[ -n "$BUILD_TOOLS" ] || { red "No build-tools found under $ANDROID_HOME."; exit 1; }
+export PATH="$PATH:${BUILD_TOOLS%/}"
 
 # --- sanity checks ---
 [ -f config.yml ]   || { red "config.yml not found — run 'fdroid init' first."; exit 1; }
