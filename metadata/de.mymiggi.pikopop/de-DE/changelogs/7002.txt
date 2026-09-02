@@ -1,0 +1,30 @@
+Vier Sachen, angestoßen von einem Durchgang auf dem Gerät.
+
+Eine weggewischte Benachrichtigung kam wieder. Der Plan stellte bei jeder
+Aktualisierung jeden Chat im Bestand neu, und ein Wischen war überhaupt nicht
+abgebildet — eine Nachricht in einem anderen Chat holte also die gerade
+weggewischte zurück. Jetzt meldet ein delete intent das Wischen, der Chat fällt
+aus dem Bestand, und neu gestellt wird nur ein Chat mit geändertem Inhalt. Jede
+Änderung trägt dazu eine Sequenznummer, damit ein überholter Stand keinen
+weggewischten Chat wieder aufspielt. Die Aktion „Gelesen" entfällt; Lesen im
+Chat räumt weiter auf, und das war der Teil, der ohnehin gefiel.
+
+Solange die App offen ist, sehen andere „online". Das SDK kann Präsenz nur
+schreiben, deshalb liest ein eigener Aufruf die der anderen — im Vordergrund
+alle 60 Sekunden, höchstens 20 Nutzende pro Runde. Ein kleiner Punkt am Avatar,
+in der Chatliste und im Raumkopf: gefüllt für online, ein Ring für abwesend,
+nichts bei offline oder unbekannt. Ein Homeserver mit abgeschalteter Präsenz
+antwortet für alle „offline", das gilt deshalb als unbekannt, damit niemand
+fälschlich offline aussieht. Und das „offline" beim Verlassen ist bestmöglich:
+wird der Prozess vorher eingefroren, bleibt die Sitzung bis zum Timeout des
+Servers online.
+
+Ein Foto öffnet sich mit einem Tippen im Vollbild und lässt sich dort zoomen
+und verschieben. Ein Tippen woanders in der Blase öffnet weiterhin die
+Nachrichtenaktionen.
+
+In der Rauminfo ist „Speichern" ein richtiger Knopf statt eines Worts im
+Leeren, und der Raumkopf schneidet der Vertrauenszeile nicht mehr das erste
+Zeichen ab.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

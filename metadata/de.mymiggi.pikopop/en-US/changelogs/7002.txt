@@ -1,0 +1,29 @@
+Four things, all prompted by a pass on the device.
+
+A notification that had been swiped away came back. The plan re-posted every
+chat it held on every update, and a swipe was not modelled at all — so a
+message in any other chat resurrected the one just dismissed. A delete intent
+now reports the swipe, the chat drops out of the store, and only a chat whose
+content changed is posted again. Every change also carries a sequence number,
+so an overtaken update cannot re-post a chat that was just swiped away. The
+"Gelesen" action is gone; reading in the chat still clears it, which was the
+part that worked.
+
+While the app is open, other people see "online". The SDK can only write
+presence, so a call of our own reads everyone else's — every 60 seconds in the
+foreground, at most 20 people per round. A small dot on the avatar, in the chat
+list and in the room header: filled for online, a ring for away, nothing for
+offline or unknown. A homeserver with presence switched off answers "offline"
+for everybody, so that answer is read as unknown rather than painting someone
+offline who is sitting in another client. And the "offline" on leaving is best
+effort: if the process is frozen first, the session keeps reading as online
+until the server's own timeout.
+
+A photo opens fullscreen on a tap, where it can be zoomed and panned. Tapping
+anywhere else in the bubble still opens the message actions.
+
+In the room info, "Speichern" is a real button instead of a word in empty
+space, and the room header no longer clips the first character off the trust
+line.
+
+Signed with our own key. This APK is for arm64-v8a.
