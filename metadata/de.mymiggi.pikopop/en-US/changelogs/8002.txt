@@ -1,0 +1,35 @@
+This release collects everything added since 0.1.4: 0.1.5 and 0.1.6 never made
+it into the repo.
+
+Video, end to end: a received video plays in the chat with a poster frame,
+pause, seeking and a way out; your own videos go out with a poster frame and a
+size check; recording works inside the app without a camera permission; and a
+video is compressed before it is sent, 720p or 1080p, and the choice is
+remembered.
+
+Photos and videos leave the device without metadata. A JPEG loses EXIF, GPS,
+XMP and the device identifier, an MP4 loses the location, the Android version
+and the timestamps, without a single byte moving. WebM and MKV cannot be
+cleaned and are refused rather than sent quietly. The file name no longer says
+anything about the camera.
+
+New: a photo can be sent veiled, one photo at a time. The switch sits in the
+send dialog rather than in the settings, so it applies to that one picture. The
+photo stays unrecognisable for you as well until it is tapped, and other
+clients receive a deliberately destroyed thumbnail.
+
+Message text can now be copied from the action sheet, offered only where there
+is text.
+
+Also from 0.1.5 and 0.1.6: links in messages are tappable, an image is sent from
+a dialog with a description as one message,
+photos open fullscreen and can be zoomed, room details list the participants
+with their Matrix ids and let you change name and topic, sharing shows the chat
+list with a search, read chats leave the notification shade and swiped ones
+stay gone, you can see who is online, the chrome has its own icon set instead
+of emoji, and a homeserver without MAS can be signed into with a password.
+
+Honestly: the video features and the veil have not yet been exercised in every
+corner on a device.
+
+Signed with our own key. This APK is for arm64-v8a.

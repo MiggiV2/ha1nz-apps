@@ -1,0 +1,28 @@
+Zwei Sachen um die Videos.
+
+Ein Video wird jetzt daran gemessen, was tatsächlich hochgeladen wird, und nicht
+an der Rohdatei. Geprüft wird die geschätzte Größe nach der Komprimierung, also
+Zielbitrate plus Ton mal Länge. Vorher zählte die Rohdatei: eine 12 Sekunden
+lange Aufnahme mit 63 MB wurde mit „der Server nimmt höchstens 50 MB" gelöscht,
+obwohl 720p rund 4 MB daraus gemacht hätte. Abgelehnt wird nur noch, was auch
+komprimiert zu groß bliebe, und die Begründung sagt dann, wie groß es geblieben
+wäre. Die Kamera begrenzt eine Aufnahme über die Länge statt über die Bytes,
+damit sie nicht mitten in der Szene abbricht.
+
+Vor dem Senden kommt eine Rückfrage. Der Dialog nennt den Raum, Dateiname,
+Länge, Größe und die geschätzte Größe nach der Komprimierung, und nimmt eine
+Beschreibung an. Erst „Senden" rechnet den Plan und startet den Encoder.
+Abbrechen, eine zweite Aufnahme und das Verlassen des Raums löschen Video und
+Standbild aus dem Zwischenspeicher.
+
+Neu: Videos lassen sich unscharf senden, wie schon die Fotos. Der Schalter sitzt
+im Sende-Dialog und ist jedes Mal aus, gilt also für dieses eine Video. Mit dem
+Ereignis geht ein absichtlich zerstörtes Standbild als Vorschau raus. Ein Video
+hat keinen Blurhash, dieses Standbild ist also die einzige Vorschau, die es
+gibt. Ein unscharfes Video zeigt kein Play-Symbol; der erste Tipper deckt es
+auf, der zweite öffnet den Player, und der ist nie unscharf.
+
+Nebenbei repariert: eine Aufnahme aus der App kam beim Empfänger als
+„…-kamera.mp4" an. Der Dateiname sagt jetzt nichts mehr über die Herkunft.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

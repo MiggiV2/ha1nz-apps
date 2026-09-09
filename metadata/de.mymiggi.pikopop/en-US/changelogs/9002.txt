@@ -1,0 +1,28 @@
+Two things about video.
+
+A video is now measured by what will actually be uploaded rather than by the raw
+file. What gets checked is the estimated size after compression, target bitrate
+plus audio times length. The raw file used to be the one checked: a 12 second
+recording of 63 MB was discarded with "the server accepts at most 50 MB",
+although 720p would have turned it into about 4 MB. Only what would still be too
+large after compression is refused now, and the reason says how large it would
+have stayed. The camera caps a recording by length rather than by bytes, so it
+no longer cuts off mid scene.
+
+Sending a video now asks first. The dialog names the room, the file name, the
+length, the size and the estimated size after compression, and it takes a
+description. Only "Senden" works out the plan and starts the encoder.
+Cancelling, a second recording and leaving the room delete the video and its
+poster frame from the cache.
+
+New: a video can be sent veiled, the way a photo already could. The switch sits
+in the send dialog and is off every time, so it applies to that one video. What
+goes out with the event as its preview is a deliberately destroyed poster frame.
+A video has no blurhash, so that frame is the only preview there is. A veiled
+video shows no play badge; the first tap reveals it, the second opens the player,
+and the player is never veiled.
+
+Fixed along the way: a recording made in the app arrived as "…-kamera.mp4" on
+the other side. The file name no longer says where it came from.
+
+Signed with our own key. This APK is for arm64-v8a.

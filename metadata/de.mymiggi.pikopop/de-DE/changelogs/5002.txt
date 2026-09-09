@@ -1,0 +1,25 @@
+Zwei neue Funktionen: Sprachnachrichten und Bildkompression.
+
+Sprachnachrichten lassen sich jetzt aufnehmen, vorhören, verwerfen und senden,
+und eingehende werden als eigenes Element mit Play, Dauer, Fortschritt und
+Waveform dargestellt statt als nicht unterstützte Nachricht. Ob etwas eine
+Sprachnachricht ist, entscheidet allein der MSC3245-Marker; eine gewöhnliche
+Audiodatei bleibt ein Anhang. Aufgenommen wird ab Android 10 als Ogg mit Opus,
+gesendet mit gemessener Dauer und gemessener Waveform. Geprüft in beide
+Richtungen gegen FluffyChat. Dafür kommt die Berechtigung für das Mikrofon
+hinzu, die erst beim ersten Aufnehmen erfragt wird und deren Ablehnung erklärt
+statt wiederholt wird.
+
+Bilder werden nicht mehr sofort gesendet, sondern erst gezeigt, mit einem
+Schalter für die Kompression und den tatsächlich gemessenen Größen vorher und
+nachher. Komprimiert wird nach WebP mit Qualität 80 und einer längsten Kante
+von 2048 Pixeln, was ein Kamerafoto meist um über 90 Prozent verkleinert. Die
+Wahl bleibt gespeichert. Animierte Bilder und echte Transparenz gehen
+unverändert raus, und beim Neucodieren fallen sämtliche EXIF-Daten weg, also
+auch Standort und Gerätekennung; nur die Ausrichtung bleibt erhalten, weil sie
+in die Pixel gerechnet wird.
+
+Dazu ein Fehler weniger: der Hinweis auf eine übersprungene Animation gehört
+zum Sticker und erscheint nicht mehr bei gewöhnlichen Bildern.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

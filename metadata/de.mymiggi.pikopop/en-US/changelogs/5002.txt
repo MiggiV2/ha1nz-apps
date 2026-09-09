@@ -1,0 +1,24 @@
+Two new features: voice messages and image compression.
+
+Voice messages can now be recorded, previewed, discarded and sent, and an
+incoming one is drawn as its own item with play, duration, progress and a
+waveform instead of an unsupported message. Whether something is a voice
+message is decided by the MSC3245 marker alone; a plain audio file stays an
+attachment. Recording produces Ogg with Opus from Android 10 on, and it is sent
+with a measured duration and a measured waveform. Verified in both directions
+against FluffyChat. This adds the microphone permission, which is asked for at
+the first recording rather than at start-up, and a refusal is explained instead
+of retried.
+
+Images are no longer sent straight away. They are shown first, with a toggle
+for compression and the real measured sizes before and after. Compression
+targets WebP at quality 80 with a longest edge of 2048 pixels, which usually
+takes a camera photo down by more than 90 percent. The choice is remembered.
+Animated images and real transparency go out untouched, and re-encoding drops
+every EXIF tag, including location and device identifiers; only the orientation
+survives, because it is baked into the pixels.
+
+One bug less as well: the note about a skipped animation belongs to stickers
+and no longer shows up on ordinary images.
+
+Signed with our own key. This APK is for arm64-v8a.

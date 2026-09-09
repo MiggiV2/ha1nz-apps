@@ -1,0 +1,35 @@
+Diese Version fasst alles zusammen, was seit 0.1.4 dazugekommen ist: 0.1.5 und
+0.1.6 sind nie im Repo gelandet.
+
+Videos, komplett: empfangene Videos werden im Chat abgespielt, mit Standbild,
+Pause, Spulen und einem Weg zurück; eigene Videos gehen mit Standbild und
+Größenprüfung raus; aufnehmen geht direkt in der App, ohne Kamera-Berechtigung;
+und vor dem Senden wird komprimiert, 720p oder 1080p, die Wahl bleibt
+gespeichert.
+
+Fotos und Videos verlassen das Gerät ohne Metadaten. Aus einem JPEG fliegen
+EXIF, GPS, XMP und die Gerätekennung, aus einem MP4 der Ort, die
+Android-Version und die Zeitstempel, ohne ein Byte zu verschieben. WebM und MKV
+lassen sich nicht säubern und werden abgelehnt statt heimlich gesendet. Der
+Dateiname sagt nichts mehr über die Kamera.
+
+Neu: Fotos lassen sich pro Bild unscharf senden. Der Schalter sitzt im
+Sende-Dialog, nicht in den Einstellungen, gilt also für dieses eine Foto. Das
+Bild bleibt auch für dich selbst unkenntlich, bis es angetippt wird, und
+anderen Clients geht ein absichtlich zerstörtes Vorschaubild mit.
+
+Nachrichtentext lässt sich über das Aktionsmenü kopieren, angeboten nur dort,
+wo es Text gibt.
+
+Dazu aus 0.1.5 und 0.1.6: Links in Nachrichten sind anklickbar, ein Bild wird
+im Dialog mit Beschreibung als eine Nachricht gesendet, Fotos gehen im Vollbild auf und lassen sich zoomen, die
+Rauminfo zeigt Teilnehmende mit Matrix-ID und erlaubt Name und Thema zu ändern,
+Teilen zeigt die Chatliste mit Suche, gelesene Chats verschwinden aus der
+Benachrichtigungsleiste und weggewischte bleiben weg, man sieht wer online ist,
+die Bedienleiste hat einen eigenen Symbolsatz statt Emoji, und für Homeserver
+ohne MAS gibt es eine Anmeldung per Passwort.
+
+Ehrlich gesagt: die Video-Funktionen und der Schleier sind auf dem Gerät noch
+nicht in jeder Ecke durchprobiert.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
