@@ -1,0 +1,27 @@
+New features
+
+- Every chat gets its own ringtone and is listed under "Conversations" in the
+  system settings rather than under notification categories.
+- Swiping a message to the right replies to it.
+- Voice messages play at 0.75x to 2x.
+- After the first sign-in a walkthrough leads to working push: permission,
+  UnifiedPush distributor, ntfy, battery optimisation.
+- Your own profile picture is shown and can be changed or removed.
+- Up to ten photos can be picked and sent at once.
+- Stickers leave the workshop as WebP only; the format choice is gone.
+
+Bug fixes
+
+- Coming back from the browser lands in the running app instead of a second
+  Piko Pop with the tab left open. The browser is handed the app's brightness,
+  and a sign-in waiting on it can be called off.
+- The sticker workshop scrolls when the keyboard comes up, so the shortcode
+  field stays visible.
+- Still stickers no longer report a skipped animation.
+
+Documentation
+
+- The device pass for the conversation channels is written up, MANUAL-TEST.md
+  is gone.
+
+Signed with our own key. This APK is for arm64-v8a.

@@ -1,0 +1,28 @@
+Neue Funktionen
+
+- Jeder Chat bekommt einen eigenen Klingelton und steht in den
+  Systemeinstellungen unter „Unterhaltungen" statt unter
+  „Benachrichtigungskategorien".
+- Ein Wisch nach rechts auf eine Nachricht antwortet darauf.
+- Sprachnachrichten lassen sich mit 0,75× bis 2× abspielen.
+- Nach der ersten Anmeldung führt ein Durchgang zu funktionierendem Push:
+  Berechtigung, UnifiedPush-Verteiler, ntfy, Akku-Optimierung.
+- Das eigene Profilbild wird gezeigt und lässt sich ändern oder entfernen.
+- Bis zu zehn Fotos auf einmal auswählen und senden.
+- Sticker verlassen die Werkstatt nur noch als WebP; die Formatwahl entfällt.
+
+Fehlerbehebungen
+
+- Die Rückkehr aus dem Browser landet in der laufenden App statt in einem
+  zweiten Piko Pop mit offenem Tab. Der Browser bekommt die Helligkeit der App,
+  und eine wartende Anmeldung lässt sich abbrechen.
+- Die Sticker-Werkstatt scrollt, wenn die Tastatur hochkommt; das Kürzelfeld
+  bleibt sichtbar.
+- Statische Sticker melden keine übersprungene Animation mehr.
+
+Dokumentation
+
+- Der Gerätedurchgang zu den Unterhaltungs-Kanälen ist nachgetragen,
+  MANUAL-TEST.md ist entfallen.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
