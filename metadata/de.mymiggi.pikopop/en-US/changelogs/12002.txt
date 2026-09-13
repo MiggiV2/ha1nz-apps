@@ -1,0 +1,17 @@
+Bug fixes
+
+- A reply from the notification shade arrives. When a message woke the app from
+  a killed state, the process that took the reply had no session: the send queue
+  could not be enabled, the reply was parked in the queue, and because a missing
+  session is not a network error it was filed there as "Nicht gesendet" and
+  never retried. The sending path now establishes the session itself, by the
+  same route an incoming push already took. If it genuinely cannot be
+  established, the message waits for a connection instead of failing.
+- A fresh process no longer overwrites the notifications. When a push woke the
+  killed app, the new process knew only the chat it woke for: it rebuilt that
+  chat's history from the newest message alone and cancelled a summary whose
+  contents it did not know, which took every notification underneath along with
+  it. Every posted message now carries what it was built from, and a fresh
+  process reads that back before it decides anything.
+
+Signed with our own key. This APK is for arm64-v8a.

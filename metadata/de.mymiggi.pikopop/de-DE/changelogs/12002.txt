@@ -1,0 +1,19 @@
+Fehlerbehebungen
+
+- Eine Antwort aus dem Benachrichtigungsbereich kommt an. Weckte eine Nachricht
+  die beendete App, hatte der Prozess, der die Antwort entgegennahm, keine
+  Sitzung: die Sendewarteschlange ließ sich nicht einschalten, die Antwort
+  landete in der Warteschlange, und weil eine fehlende Sitzung kein Netzfehler
+  ist, wurde sie dort als „Nicht gesendet" abgelegt und nie erneut versucht. Der
+  Sendeweg stellt die Sitzung jetzt selbst her, über denselben Weg, den ein
+  ankommender Push schon nahm. Lässt sie sich wirklich nicht herstellen, wartet
+  die Nachricht auf Verbindung, statt zu scheitern.
+- Ein neuer Prozess überschreibt die Benachrichtigungen nicht mehr. Weckte ein
+  Push die beendete App, kannte der frische Prozess nur den Chat, für den er
+  aufwachte: er baute dessen Verlauf aus der neuesten Nachricht allein neu und
+  brach eine Zusammenfassung ab, deren Inhalt er nicht kannte, worauf Android
+  jede Benachrichtigung darunter mitnahm. Jede gestellte Nachricht trägt jetzt
+  mit, woraus sie gebaut wurde, und ein frischer Prozess liest sie zurück,
+  bevor er etwas entscheidet.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
