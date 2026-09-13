@@ -1,0 +1,21 @@
+New features
+
+- A video from a chat can be saved to the gallery. "Save" is now offered on a
+  video too, both in the action sheet and in the fullscreen player. The video is
+  never loaded into memory as a whole: it is decrypted into the cache and
+  streamed from there into Movies/Piko Pop.
+
+Bug fixes
+
+- Notifications stay put. Since 0.1.9 an incoming message could empty the whole
+  shade: Android withdraws every notification on a channel it deletes, and the
+  channel upkeep ran on a room list that reports itself empty once at the start
+  of every session. Only channels that no longer hold a notification are deleted
+  now.
+- A cold start leaves other notifications alone. If the app had been killed and
+  was then woken by a message, the fresh process cancelled the summary the old
+  one had posted, which took every notification under it along. A summary is now
+  only cancelled by the process that posted it. Measured on the device: four
+  notifications stay standing where previously only the newest one survived.
+
+Signed with our own key. This APK is for arm64-v8a.

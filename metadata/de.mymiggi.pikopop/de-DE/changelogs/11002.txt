@@ -1,0 +1,22 @@
+Neue Funktionen
+
+- Ein Video aus dem Chat landet in der Galerie. „Speichern" steht jetzt auch am
+  Video, im Aktionsblatt und im Vollbild-Player. Das Video wird dabei nie
+  vollständig in den Speicher geladen, sondern entschlüsselt in den Cache und
+  von dort nach Movies/Piko Pop gestreamt.
+
+Fehlerbehebungen
+
+- Benachrichtigungen bleiben stehen. Seit 0.1.9 konnte eine ankommende
+  Nachricht den gesamten Benachrichtigungsbereich leeren: Android nimmt jede
+  Benachrichtigung eines Kanals zurück, den es löscht, und die Kanalpflege lief
+  auf einer Raumliste, die zu Beginn jeder Sitzung einmal leer gemeldet wird.
+  Gelöscht wird jetzt nur noch, was keine Benachrichtigung mehr hält.
+- Ein Kaltstart lässt fremde Benachrichtigungen in Ruhe. Wurde die App beendet
+  und danach durch eine Nachricht geweckt, brach der frische Prozess die
+  Zusammenfassung des alten ab und nahm damit jede Benachrichtigung darunter
+  mit. Abgebrochen wird jetzt nur noch, was derselbe Prozess selbst gestellt
+  hat. Auf dem Gerät nachgemessen: vier Benachrichtigungen bleiben stehen, wo
+  vorher nur die neueste übrig blieb.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
