@@ -1,0 +1,14 @@
+Neu
+
+- Dateien senden: Im Anhangsblatt schickt „Datei“ ein beliebiges Dokument,
+  etwa ein PDF, eine Tabelle oder ein Archiv. Vorher zeigt ein Dialog den
+  Namen, die Größe und ein optionales Beschreibungsfeld. Die Datei geht
+  unverändert und unter ihrem eigenen Namen hinaus.
+- Dateien speichern: Eine empfangene Datei ist eine eigene Zeile mit Name und
+  Größe. Ein Tipp speichert sie entschlüsselt unter Download/Piko Pop, und
+  „Öffnen“ in der Meldung danach öffnet sie gleich in einer passenden App.
+- Ein eigener Hintergrund pro Chat: In den Raumdetails bekommt jeder Chat
+  unter „Chat-Hintergrund“ ein eigenes Muster oder Foto. „Standard verwenden“
+  führt zum allgemeinen Hintergrund zurück.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

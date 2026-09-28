@@ -1,0 +1,14 @@
+New
+
+- Send files: in the attachment sheet, "Datei" sends any document, such as a
+  PDF, a spreadsheet or an archive. A dialog first shows its name, its size
+  and an optional description. The file goes out unchanged, under its own
+  name.
+- Save files: a received file is a row of its own with name and size. A tap
+  saves it decrypted to Download/Piko Pop, and "Öffnen" in the message that
+  follows opens it straight away in a matching app.
+- A background per chat: in the room details, "Chat-Hintergrund" gives each
+  chat a pattern or photo of its own. "Standard verwenden" goes back to the
+  general background.
+
+Signed with our own key. This APK is for arm64-v8a.
