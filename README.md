@@ -18,7 +18,7 @@ to build, review the code, test every release, and sign & publish it.
 <!-- apps:begin -->
 | **SimpleDay** | Minimalist Markdown diary with app lock and your-own-cloud WebDAV sync | 1.4.0 | GPL-3.0-only | [MiggiV2/SimpleDay](https://github.com/MiggiV2/SimpleDay) |
 | **Movie Mobile** | Browse your Movie Archive collection, online or offline | 1.3.1 | MIT | [Miggi/movie-mobile2](https://code.mymiggi.de/Miggi/movie-mobile2) |
-| **Piko Pop** | Sticker-first, cozy Matrix messenger — encrypted, OIDC-first sign-in | 0.1.11 (pre-release) | GPL-3.0-or-later | [Miggi/Piko-Pop](https://code.mymiggi.de/Miggi/Piko-Pop) |
+| **Piko Pop** | Sticker-first, cozy Matrix messenger — encrypted, OIDC-first sign-in | 0.1.12 (pre-release) | GPL-3.0-or-later | [Miggi/Piko-Pop](https://code.mymiggi.de/Miggi/Piko-Pop) |
 | **Tankblick** | German fuel prices for E5, E10 and diesel — no account, no tracking | 0.3.0 (pre-release) | GPL-3.0-or-later | [Miggi/tankblick](https://code.mymiggi.de/Miggi/tankblick) |
 <!-- apps:end -->
 

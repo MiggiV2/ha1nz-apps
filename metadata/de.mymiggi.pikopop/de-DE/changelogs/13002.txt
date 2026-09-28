@@ -1,0 +1,26 @@
+Neu
+
+- Medien-Übersicht: In den Raumdetails zeigt „Medien“ alle Fotos und Videos
+  eines Chats als Raster, nach Monaten sortiert. Ein Tipp öffnet sie in der
+  gewohnten Vollbildansicht.
+- Chat-Hintergrund: Unter Erscheinungsbild lässt sich hinter jedem Chat ein
+  Muster in einer Farbe oder ein eigenes Foto legen, mit Helligkeit und
+  Unschärfe. Ab Werk ist Konfetti eingestellt, „Keiner“ schaltet es ab.
+- Unbekannte Ereignisse ausblenden: Was Piko Pop nicht darstellen kann, etwa
+  Umfragen oder Anrufe, taucht im Verlauf nicht mehr als leere Zeile auf. Ein
+  Schalter unter Erscheinungsbild holt es zurück.
+
+Fehlerbehebungen
+
+- Die erste eigene Nachricht eines neuen Tages bleibt im Blick. Kam sie mit
+  ihrem Tagestrenner, blieb der Verlauf auf der vorigen Nachricht stehen.
+- Die Benachrichtigungsregeln, die Geräteliste, die Anwesenheit und die
+  Sticker-Packs scheitern nicht mehr mit 401, wenn das kurzlebige Zugangstoken
+  eines OIDC-Servers gerade abgelaufen ist. Piko Pop erneuert es und fragt
+  noch einmal.
+
+Sonstiges
+
+- Matrix-SDK 26.09.26 und aktuelle Android-Bibliotheken.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

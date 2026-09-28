@@ -1,0 +1,25 @@
+New
+
+- Media overview: in the room details, "Medien" shows every photo and video
+  of a chat as a grid, grouped by month. A tap opens it in the usual
+  fullscreen viewer.
+- Chat background: under Appearance, every chat can have a pattern in a
+  colour or a photo of your own behind it, with brightness and blur. Confetti
+  is the default; "Keiner" turns it off.
+- Hide unknown events: what Piko Pop cannot display, such as polls or calls,
+  no longer shows up as an empty line in the timeline. A switch under
+  Appearance brings it back.
+
+Bug fixes
+
+- Your first message of a new day stays in view. When it arrived together
+  with its day divider, the timeline stayed on the previous message.
+- Notification rules, the device list, presence and sticker packs no longer
+  fail with 401 when an OIDC server's short-lived access token has just
+  expired. Piko Pop renews it and asks again.
+
+Other
+
+- Matrix SDK 26.09.26 and current Android libraries.
+
+Signed with our own key. This APK is for arm64-v8a.
