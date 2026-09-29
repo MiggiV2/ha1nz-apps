@@ -1,0 +1,21 @@
+Neu
+
+- Standort teilen: „Standort“ im Anhangsblatt schickt den aktuellen Ort.
+  Empfangene Standorte öffnen sich in der Karten-App.
+- Live-Standort: Für eine gewählte Dauer im Hintergrund teilen, als Karte im
+  Raum mit Entfernung und „Beenden“. Nur in Räumen, die es erlauben.
+- Umfragen: anzeigen, abstimmen, beenden und selbst erstellen.
+- Favoriten stehen in der Raumliste ganz oben.
+- Galerie: Fotos und Videos gemeinsam in einem Dialog senden, mit
+  Vorschaubildern.
+- Gelöschte Nachrichten stehen als eine schlichte Zeile zusammen.
+
+Fehlerbehebungen
+
+- Eine Antwort lädt ihr Zitat nach, statt es aufzugeben.
+- Ist die Standortermittlung aus, sagt der Dialog das und bietet „Standort
+  einschalten“.
+- Die unscharfe Vorschau im Senden-Dialog ist wirklich unscharf.
+- Videos ohne gemeldeten Typ werden als Video erkannt.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

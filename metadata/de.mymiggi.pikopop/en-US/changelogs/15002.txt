@@ -1,0 +1,20 @@
+New
+
+- Share location: "Standort" in the attachment sheet sends where you are.
+  Received locations open in the maps app.
+- Live location: share in the background for a chosen time, shown as a card
+  in the room with distance and "Beenden". Only in rooms that allow it.
+- Polls: view, vote, end and create them.
+- Favourites sit at the top of the room list.
+- Gallery: send photos and videos together in one dialog, with thumbnails.
+- Deleted messages collapse into one plain line.
+
+Bug fixes
+
+- A reply loads its quote again instead of giving up.
+- With location switched off, the dialog says so and offers "Standort
+  einschalten".
+- The blurred preview in the send dialog is really blurred.
+- Videos without a reported type are recognised as videos.
+
+Signed with our own key. This APK is for arm64-v8a.
