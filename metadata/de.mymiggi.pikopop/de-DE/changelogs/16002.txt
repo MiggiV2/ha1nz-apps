@@ -1,0 +1,10 @@
+Neu
+
+- Benachrichtigungen prüfen: unter Du → Benachrichtigungen prüft Piko Pop
+  Schritt für Schritt Erlaubnis, Konto, Verteiler, Akku, Gateway, Pusher,
+  einen Testpush und eine Testbenachrichtigung, mit Hilfe zu jedem Fehler und
+  „Bericht teilen“.
+- Teilt jemand im Chat seinen Live-Standort, steht oben ein Banner mit
+  „Ansehen“, statt dass man hochscrollen muss.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

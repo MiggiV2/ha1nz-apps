@@ -1,0 +1,9 @@
+New
+
+- Check notifications: under Du → notifications, Piko Pop checks permission,
+  account, distributor, battery, gateway, pusher, a test push and a test
+  notification step by step, with help for each failure and "Bericht teilen".
+- When someone shares their live location in a chat, a banner at the top
+  offers "Ansehen" instead of scrolling back up.
+
+Signed with our own key. This APK is for arm64-v8a.
