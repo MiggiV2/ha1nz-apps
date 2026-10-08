@@ -1,0 +1,9 @@
+New
+
+- After a break, opening a chat shows the messages you already read together
+  with the new ones, instead of a few seconds later.
+- The notification check lists the last 20 pushes under "Letzte Pushes": when
+  each arrived and whether it was fully processed. The log is part of the
+  shared report and contains no message content.
+
+Signed with our own key. This APK is for arm64-v8a.

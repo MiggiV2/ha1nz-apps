@@ -1,0 +1,9 @@
+Neu
+
+- Nach einer Pause erscheinen beim Öffnen eines Chats die gelesenen Nachrichten
+  zusammen mit den neuen, statt erst ein paar Sekunden später.
+- Benachrichtigungen prüfen zeigt unter „Letzte Pushes“ ein Protokoll der
+  letzten 20 Pushes: wann sie ankamen und ob sie fertig verarbeitet wurden.
+  Es steht auch im geteilten Bericht und enthält keine Nachrichteninhalte.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
