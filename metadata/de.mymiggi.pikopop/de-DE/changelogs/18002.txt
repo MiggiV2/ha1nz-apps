@@ -1,0 +1,9 @@
+Neu
+
+- Sprachnachrichten lassen sich spulen: Tippen oder Ziehen auf den Tonverlauf
+  springt an diese Stelle, beim Abspielen und in der Pause.
+- Die Tipp-Anzeige zeigt hüpfende Punkte und blendet weich ein und aus.
+- Benachrichtigungen prüfen sieht jetzt auch nach, ob Piko Pop von der
+  Akku-Optimierung ausgenommen ist, und kann das direkt bei Android anfragen.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

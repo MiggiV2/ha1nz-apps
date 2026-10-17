@@ -1,0 +1,9 @@
+New
+
+- Voice messages can be rewound and fast-forwarded: tap or drag on the waveform
+  to jump to that spot, while playing or paused.
+- The typing indicator shows bouncing dots and fades in and out smoothly.
+- The notification check now also tests whether Piko Pop is exempt from battery
+  optimisation, and can ask Android for the exemption directly.
+
+Signed with our own key. This APK is for arm64-v8a.
