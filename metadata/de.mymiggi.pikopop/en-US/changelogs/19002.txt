@@ -1,0 +1,8 @@
+New
+
+- Formatted messages are displayed: bold, italic, code, code blocks, lists,
+  quotes, headings and links, the way Element or FluffyChat send them.
+- What you type is sent as Markdown: **bold**, _italic_, `code`, lists, quotes
+  and links arrive formatted in other clients.
+
+Signed with our own key. This APK is for arm64-v8a.

@@ -1,0 +1,9 @@
+Neu
+
+- Formatierte Nachrichten werden dargestellt: fett, kursiv, Code, Codeblöcke,
+  Listen, Zitate, Überschriften und Links, so wie Element oder FluffyChat sie
+  schicken.
+- Was man schreibt, geht als Markdown hinaus: **fett**, _kursiv_, `Code`, Listen,
+  Zitate und Links kommen bei anderen Clients formatiert an.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
