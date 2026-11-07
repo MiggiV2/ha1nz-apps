@@ -1,0 +1,10 @@
+Behoben
+
+- Ein offener, aber minimierter Chat schickt keine Lesebestätigungen mehr.
+  Nachrichten gelten erst als gelesen, wenn der Chat wieder im Vordergrund ist.
+- Wer Piko Pop offen hat, wird anderen jetzt durchgehend als online angezeigt,
+  nicht mehr nur in der ersten halben Minute.
+- Die Anmeldung beim Homeserver per well-known folgt nur noch https-Zielen, und
+  die Sicherheits-Bildschirme lassen sich nicht mehr abfotografieren.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

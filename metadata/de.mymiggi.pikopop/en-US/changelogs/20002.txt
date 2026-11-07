@@ -1,0 +1,10 @@
+Fixed
+
+- A chat left open while the app is minimised no longer sends read receipts.
+  Messages count as read only once the chat is back in front.
+- While Piko Pop is open, others now see you as online the whole time, not just
+  for the first half minute.
+- Homeserver discovery via well-known only follows https targets, and the
+  security screens can no longer be captured in screenshots.
+
+Signed with our own key. This APK is for arm64-v8a.
