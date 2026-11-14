@@ -1,0 +1,14 @@
+New
+
+- "+ Neu" in the chat list starts a direct chat: enter a Matrix ID or search
+  for a person.
+- Received pictures can be saved to the gallery automatically, one album per
+  chat. Off by default, switch it on under Medien.
+
+Fixed
+
+- Tapping a notification now opens the chat. Messages you have already read no
+  longer come back in the next notification.
+- The app no longer crashes when an invitation or a new room arrives.
+
+Signed with our own key. This APK is for arm64-v8a.

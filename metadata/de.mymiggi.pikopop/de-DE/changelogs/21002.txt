@@ -1,0 +1,13 @@
+Neu
+
+- „+ Neu" startet einen Direktchat: Matrix-ID eingeben oder Person suchen.
+- Empfangene Bilder lassen sich automatisch in der Galerie speichern, ein Album
+  pro Chat. Ab Werk aus, einzuschalten unter Medien.
+
+Behoben
+
+- Ein Tipp auf eine Benachrichtigung öffnet jetzt den Chat, und gelesene
+  Nachrichten tauchen in der nächsten nicht mehr auf.
+- Kein Absturz mehr, wenn eine Einladung oder ein neuer Raum eintrifft.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.
