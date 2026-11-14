@@ -1,0 +1,14 @@
+Neu
+
+- Animierte GIFs und WebPs bleiben in der Sticker-Werkstatt animiert
+  („Animation behalten“). Grenzen: 2 MB, 512 px, 300 Einzelbilder.
+- Einzelne Sticker lassen sich im Sticker-Regal löschen.
+
+Besser
+
+- Das Sticker-Regal zeigt alle Sticker ohne Aufklappen, nutzt die volle
+  Breite und spielt animierte Sticker ab.
+- Eigene Packs erscheinen sofort, die Suche nach Packs in Chats läuft
+  parallel und mit Ladeanzeige.
+
+Signiert mit unserem eigenen Schlüssel. Diese APK ist für arm64-v8a.

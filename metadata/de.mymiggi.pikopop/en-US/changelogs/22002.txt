@@ -1,0 +1,14 @@
+New
+
+- Animated GIFs and WebPs stay animated in the sticker workshop
+  ("Animation behalten"). Limits: 2 MB, 512 px, 300 frames.
+- Single stickers can be deleted from the sticker shelf.
+
+Improved
+
+- The sticker shelf shows every sticker without expanding a pack, uses the
+  full width and plays animated stickers.
+- Your own packs appear at once; packs in your chats are searched in
+  parallel, with a loading indicator.
+
+Signed with our own key. This APK is for arm64-v8a.
